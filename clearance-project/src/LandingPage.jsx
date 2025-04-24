@@ -7,9 +7,12 @@ export default function LandingPage() {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* 🔵 HEADER with Logo */}
       <header className="w-full flex items-center justify-between px-8 py-4 shadow-sm bg-green-100 hover:shadow-lg transition duration-300">
-        <div className="text-2xl font-bold text-blue-700">
-          AASTU LOGO
+        
+        <div className="flex items-center space-x-3 p-0">
+         <img src="/Logo.png" alt="Logo" className="h-10 w-10 rounded-full object-cover" />
+         <span className="font-bold text-xl text-blue-500">AASTU</span>
         </div>
+
       </header>
 
       {/* 🔷 MAIN Landing Content */}
@@ -72,6 +75,21 @@ export default function LandingPage() {
           ))}
         </section>
       </main>
+     
+      <div className="mt-8 px-4">
+        <h2 className="text-xl font-semibold mb-4 text-center text-purple-700">How the Clearance System Works</h2>
+        <div className="w-[800px] h-[450px] mx-auto">
+          <iframe
+           className="w-full h-full rounded-lg shadow-lg"
+           src="https://www.youtube.com/embed/xZtadif15WU?si=YTimv4o-zkniP2PW"
+           title="Clearance System Tutorial"
+           frameBorder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+
 
       {/* ⚫ FOOTER */}
       <footer className="bg-white text-center py-4 border-t text-blue-500 text-sm ">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Bell, ClipboardList, Activity, HelpCircle, LogOut, Menu, X } from "lucide-react";
-import { useNavigate } from 'react-router-dom'; // Step 1: Import useNavigate
+//import { useNavigate } from 'react-router-dom'; // Step 1: Import useNavigate
 
 const records = [
     { office: "Finance", item: "500 ETB", borrowDate: "March 27, 2025", returnDate: "March 27, 2025", status: "Not returned", comment: "The returning date has passed" },
@@ -10,25 +10,23 @@ const records = [
   ];
 
 function StatusBadge({ status }) {
-  const colorClasses = status === "Returned"
-    ? "bg-green-200 text-green-800"
-    : "bg-yellow-200 text-yellow-800";
-  return (
-    <span className={`px-2 py-1 rounded-full text-sm font-medium ${colorClasses}`}>{status}</span>
-  );
-}
+    const colorClasses = status === "Returned" ? "bg-green-200 text-green-800": "bg-yellow-200 text-yellow-800";
+    return (
+     <span className={`px-2 py-1 rounded-full text-sm font-medium ${colorClasses}`}>{status}</span>
+    );
+ };
 
 export default function EmployeeDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [profileOpen, setProfileOpen] = useState(false);
-  const navigate = useNavigate(); // Step 2: Initialize useNavigate
+  //const navigate = useNavigate(); // Step 2: Initialize useNavigate
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const toggleProfile = () => setProfileOpen(!profileOpen);
 
-  const handleButtonClick = () => {
-    navigate('/support'); // Navigate to the SupportPage
-  };
+  //const handleButtonClick = () => {
+   // navigate('/support'); // Navigate to the SupportPage
+   //};
 
   // Dummy employee data
   const employee = {
@@ -49,8 +47,8 @@ export default function EmployeeDashboard() {
         <div className="flex flex-col h-full justify-between">
           <div>
             <div className="flex items-center space-x-3 p-6">
-              <img src="/logo.png" alt="Logo" className="h-10" />
-              <span className="font-bold text-xl">AASTU Logout</span>
+              <img src="/Logo.png" alt="Logo" className="h-10 w-10 rounded-full object-cover" />
+              <span className="font-bold text-x">STAFF CLEARANCE SYSTEM</span>
             </div>
             <nav className="mt-8 space-y-2 px-2">
               <button className="w-full flex items-center px-4 py-3 hover:bg-yellow-500 rounded-lg transition">
@@ -63,7 +61,7 @@ export default function EmployeeDashboard() {
                 <Activity className="h-5 w-5 mr-3" /> Progress
               </button>
               <button
-                onClick={handleButtonClick} // Step 3: Attach the function to the button
+                //onClick={handleButtonClick} // Step 3: Attach the function to the button
                 className="w-full flex items-center px-4 py-3 hover:bg-yellow-500 rounded-lg transition"
               >
                 <HelpCircle className="h-5 w-5 mr-3" /> Support

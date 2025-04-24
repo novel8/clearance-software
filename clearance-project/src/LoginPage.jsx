@@ -6,8 +6,9 @@ const LoginPage = () => {
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-white">
             {/* 🔵 HEADER with Logo */}
      <header className="w-full flex items-center justify-between px-8 py-4 shadow-sm bg-green-100 hover:shadow-lg transition duration-300">
-        <div className="text-2xl font-bold text-blue-700">
-          AASTU LOGO
+        <div className="flex items-center space-x-3 p-0">
+         <img src="/Logo.png" alt="Logo" className="h-10 w-10 rounded-full object-cover" />
+         <span className="font-bold text-xl text-blue-500">AASTU</span>
         </div>
       </header>
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
